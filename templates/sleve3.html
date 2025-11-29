@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Detail</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 40px;
+    }
+
+    .container {
+      display: flex;
+      width: 2000px;
+      margin: auto;
+      background: #000000;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    .left-img {
+      flex: 1;
+    }
+
+    .left-img img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .right-details {
+      flex: 2;
+      padding-left: 40px;
+    }
+
+    .product-title {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .rating {
+      color: green;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 30px;
+      color: #e53935;
+      margin-bottom: 10px;
+    }
+
+    .original-price {
+      font-size: 18px;
+      color: grey;
+      text-decoration: line-through;
+      margin-left: 10px;
+    }
+
+    .discount {
+      color: green;
+      font-size: 16px;
+      margin-left: 10px;
+    }
+
+    .description {
+      font-size: 16px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .buy-now-btn {
+      background-color: #ff6f00;
+      color: #fff;
+      border: none;
+      padding: 14px 30px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .buy-now-btn:hover {
+      background-color: #e65100;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="left-img">
+      <img src="{{ url_for('static', filename='slv1.webp') }}" alt="Smartwatch">
+    </div>
+
+    <div class="right-details">
+      <div class="product-title">Olive Green Linen Blend Shirt</div>
+      <div class="rating">⭐ 4.1 | 7,26,772 Ratings</div>
+      <div class="price">₹1,199
+        <span class="original-price">₹5,999</span>
+        <span class="discount">80% off</span>
+      </div>
+
+      <div class="description">
+        This full sleeve shirt in a muted olive green tone is made from a lightweight linen-cotton blend, offering a breezy, natural feel. </div>
+
+        <a href="/order-success"><button class="buy-now-btn">Buy Now</button></a>
+    </div>
+  </div>
+
+</body>
+</html>

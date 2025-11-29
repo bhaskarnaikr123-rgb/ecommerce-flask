@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoe Factory - Men's Collection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style-home.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Shoe Factory</div>
+        <nav>
+            <ul>
+                <li><a href="/men">Men</a></li>
+                <li><a href="/new">New Arrivals</a></li>
+                <li><a href="#prod">Sale</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+        <form action="{{ url_for('search') }}" method="GET" class="search-bar">
+            <input type="text" name="query" placeholder="Search by products" required>
+            <button type="submit" class="search-icon">🔍</button>
+        </form>
+        </div>
+        
+        <div class="auth-links">
+            {% if username %}
+            Welcome, {{ username }} | <a href="{{ url_for('logout') }}">Logout</a>
+            {% else %}
+            <a href="{{ url_for('login') }}">Login</a> / <a href="{{ url_for('signup') }}">Signup</a>
+            {% endif %}
+        </div>
+    </header>
+
+    <!-- <div class="user-greet">
+        Welcome, {{ username }} | <a href="{{ url_for('logout') }}">Logout</a>
+    </div> -->
+
+    <section class="hero">
+        <h1>Step into Style</h1>
+        <p>Discover our latest collection of men's wear.</p>
+        <a href="#pro" class="btn">Shop Now</a>
+    </section>
+
+    <section class="products" id="pro">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <a href="{{ url_for('formals') }}"><img src="{{ url_for('static', filename='for.png') }}" alt="Product 1"></a>
+                <h3>Formals</h3>
+                <a href="{{ url_for('formals') }}" class="category-btn">
+                    <p>Explore Formals</p> <span class="arrow">→</span>
+                  </a>
+                <p>₹1,999</p>
+            </div>
+            <div class="product-card">
+                <a href="{{ url_for('jackets') }}"><img src="{{ url_for('static', filename='jackets.png') }}" alt="Product 2"></a>
+                <h3>Leather Jackets</h3>
+                <a href="{{ url_for('formals') }}" class="category-btn">
+                    <p>Explore Formals</p> <span class="arrow">→</span>
+                  </a>
+                <p>₹2,499</p>
+            </div>
+            <div class="product-card">
+                <a href="{{ url_for('over') }}"><img src="{{ url_for('static', filename='over1.jpg') }}" alt="Product 2"></a>
+                <h3>OverSized-Tshirts</h3>
+                <a href="{{ url_for('formals') }}" class="category-btn">
+                    <p>Explore Formals</p> <span class="arrow">→</span>
+                  </a>
+                <p>₹899</p>
+            </div>
+            <div class="product-card">
+                <a href="{{ url_for('sleve') }}"><img src="{{ url_for('static', filename='slev.avif') }}" alt="Product 2"></a>
+                <h3>Sleeves Shirt</h3>
+                <a href="{{ url_for('formals') }}" class="category-btn">
+                    <p>Explore Formals</p> <span class="arrow">→</span>
+                  </a>                  
+                <p>₹999</p>
+            </div>
+            
+            <!-- Add more product cards as needed -->
+        </div>
+    </section>
+    <section class="products" id="prod">
+        <h2>Top Deals</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <a href="{{ url_for('cargo') }}"><img src="{{ url_for('static', filename='car.webp') }}" alt="Product 1"></a>
+                <h3>CARGOS</h3>
+                <p>₹1,999</p>
+            </div>
+            <div class="product-card" >
+                <a href="{{ url_for('shoesmain') }}">
+                    <img src="{{ url_for('static', filename='shoe.webp') }}" alt="Product 2">
+                </a>
+                <h3>SHOES</h3>
+                <p>₹2,499</p>
+            </div>
+            <div class="product-card">
+                <a href="{{ url_for('watches') }}"><img src="{{ url_for('static', filename='cas.webp') }}" alt="Product 2"></a>
+                <h3>WATCHES</h3>
+                <p>₹899</p>
+            </div>
+            
+            <!-- Add more product cards as needed -->
+        </div>
+    </section>
+    <section class="products" id="shoe-sec">
+        <h2>Trendy sneakers</h2>
+        <div class="product-grid" id="shoes">
+            <div class="product-card">
+                <a href="/roadster"><img src="{{ url_for('static', filename='rod.webp') }}" alt="Product 1"></a>
+                <h3>RODSTER</h3>
+                <p>₹1,999</p>
+            </div>
+            <div class="product-card">
+                <a href="/asian"><img src="{{ url_for('static', filename='shoe.webp') }}" alt="Product 2"></a>
+                <h3>ASIAN</h3>
+                <p>₹2,499</p>
+            </div>
+            <div class="product-card">
+                <a href="/nykaa"><img src="{{ url_for('static', filename='fer.avif') }}" alt="Product 2"></a>
+                <h3>NyKAA</h3>
+                <p>₹899</p>
+            </div>
+            <!-- <div class="product-card">
+                <a href="/neki"><img src="{{ url_for('static', filename='sne.webp') }}" alt="Product 2"></a>
+                <h3>NEKI</h3>
+                <p>₹899</p>
+            </div> -->
+            <div class="product-card">
+                <a href="/puma"><img src="{{ url_for('static', filename='pu.webp') }}" alt="Product 2"></a>
+                <h3>PUMA</h3>
+                <p>₹899</p>
+            </div>
+            
+            <!-- Add more product cards as needed -->
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Shoe Factory. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

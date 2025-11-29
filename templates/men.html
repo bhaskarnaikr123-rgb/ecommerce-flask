@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Men's Collection - Shoe Factory</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style-men.css') }}">
+</head>
+<body>
+
+  <header>
+    <div class="logo">Shoe Factory</div>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/men">Men</a></li>
+        <li><a href="/new">New Arrivals</a></li>
+        <li><a href="#">Sale</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <!-- Men's Section -->
+  <section class="men-section">
+    <h2>Men's Collection</h2>
+    <div class="men-products">
+      <div class="product-card">
+        <a href="#"><img src="{{ url_for('static', filename='nike.webp') }}" alt="Product 1"></a>
+        <h3>Sporty Sneakers</h3>
+        <p>₹2,499</p>
+        <a href="/order-success"><button class="buy-now-btn">Buy Now</button></a>
+      </div>
+      <div class="product-card">
+        <a href="#"><img src="{{ url_for('static', filename='lof.webp') }}" alt="Product 1"></a>
+        <h3>Leather Loafers</h3>
+        <p>₹3,299</p>
+        <a href="/order-success"><button class="buy-now-btn">Buy Now</button></a>
+      </div>
+      <div class="product-card">
+        <a href="#"><img src="{{ url_for('static', filename='run.jpg') }}" alt="Product 1"></a>
+        <h3>Running Shoes</h3>
+        <p>₹2,899</p>
+        <a href="/order-success"><button class="buy-now-btn">Buy Now</button></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Shoe Factory. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Arrivals - Clothes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style-new.css') }}">
+</head>
+
+<body>
+    <header>
+        <div class="logo"><strong>Shoe Factory</strong></div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/men">Men</a></li>
+                <li><a href="#clothes">Clothes</a></li>
+                <li><a href="#shoe">Shoes</a></li>
+                <li><a href="#watches">Watches</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <h2>New Arrival: Clothes</h2>
+    <div class="product-grid" id="clothes">
+        <div class="product-card">
+            <a href="#"><img src="{{ url_for('static', filename='casu.webp') }}" alt="Product 1"></a>
+            <h3>Casual Shirt</h3>
+            <p>₹999</p>
+        </div>
+        <div class="product-card">
+            <a href="#"><img src="{{ url_for('static', filename='gt.webp') }}" alt="Product 1"></a>
+            <h3>Graphic Tee</h3>
+            <p>₹799</p>
+        </div>
+        <div class="product-card">
+            <a href="#"><img src="{{ url_for('static', filename='wi.webp') }}" alt="Product 1"></a>
+            <h3>Winter Jacket</h3>
+            <p>₹2,499</p>
+        </div>
+    </div>
+    <h2>New Arrival: Shoes</h2>
+    <div class="product-grid" id="shoe">
+        <div class="product-card">
+            <a href="#"><img src="{{ url_for('static', filename='shoe.webp') }}" alt="Product 1"></a>
+            <h3>Casual Shirt</h3>
+            <p>₹999</p>
+        </div>
+        <div class="product-card">
+            <a href="#"><img src="{{ url_for('static', filename='sne.webp') }}" alt="Product 1"></a>
+            <h3>Graphic Tee</h3>
+            <p>₹799</p>
+        </div>
+        <div class="product-card">
+            <a href="#"><img src="{{ url_for('static', filename='pu.webp') }}" alt="Product 1"></a>
+            <h3>Winter Jacket</h3>
+            <p>₹2,499</p>
+        </div>
+    </div>
+    <h2>New Arrival: Watches</h2>
+    <div class="product-grid" id="watches">
+        <div class="product-card">
+            <a href="#"><img src="{{ url_for('static', filename='watch.webp') }}" alt="Product 1"></a>
+            <h3>Casual Shirt</h3>
+            <p>₹999</p>
+        </div>
+        <div class="product-card">
+            <a href="#"><img src="{{ url_for('static', filename='cas.webp') }}" alt="Product 1"></a>
+            <h3>Graphic Tee</h3>
+            <p>₹799</p>
+        </div>
+        <div class="product-card">
+            <a href="#"><img src="{{ url_for('static', filename='ti.webp') }}" alt="Product 1"></a>
+            <h3>Winter Jacket</h3>
+            <p>₹2,499</p>
+        </div>
+    </div>
+</body>
+
+</html>

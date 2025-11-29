@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Success</title>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <lottie-player 
+        src="https://assets1.lottiefiles.com/packages/lf20_jbrw3hcz.json"
+        background="transparent"  
+        speed="1"  
+        style="width: 300px; height: 300px;"  
+        autoplay>
+    </lottie-player>
+
+    <h2>Your order has been placed successfully!</h2>
+
+    <a href="{{ url_for('home') }}">
+        <button class="btn">Continue Shopping</button>
+    </a>
+
+</body>
+</html>
